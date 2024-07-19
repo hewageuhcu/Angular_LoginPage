@@ -1,0 +1,80 @@
+<section class="vh-100">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6 text-black">
+  
+          <div class="px-5 ms-xl-4">
+            <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+          
+             
+            <div class="logo-container">  <img src="assets/logo.png" alt="logo"></div>
+            <h1 class="fw-normal mb-3 pb-3" style="letter-spacing: 10px; color: #23d229" ><b>Sri Lanka</b></h1>
+          </div>
+  
+          <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+  
+            @if(isLoginView) {
+                <form style="width: 23rem;">
+  
+                    <h2 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;" ><b>Log in</b></h2>
+        
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input name="userName" [(ngModel)]="userLogin.userName" type="email" id="form2Example18" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example18">User Name</label>
+                    </div>
+        
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input name="password" [(ngModel)]="userLogin.password" type="password" id="form2Example28" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example28">Password</label>
+                    </div>
+        
+                    <div class="pt-1 mb-4" >
+                      <button data-mdb-button-init data-mdb-ripple-init (click)="onLogin()" class="btn btn-info btn-lg btn-block" type="button" >Login</button>
+                    </div>
+        
+                   
+                    <p>Don't have an account? <a class="link-info" (click)="isLoginView = false">Register with me</a></p>
+        
+                  </form>
+            } @else {
+                <form style="width: 23rem;">
+  
+                    <h2 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px" ><b>Register</b></h2>
+        
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input name="emailId" [(ngModel)]="userRegisterObj.emailId" type="email" id="form2Example18" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example18">Email address</label>
+                    </div>
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input name="userName" [(ngModel)]="userRegisterObj.userName" type="email" id="form2Example18" class="form-control form-control-lg" />
+                        <label class="form-label" for="form2Example18">User Name</label>
+                      </div>
+        
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input name="password" [(ngModel)]="userRegisterObj.password" type="password" id="form2Example28" class="form-control form-control-lg" />
+                      <label class="form-label" for="form2Example28">Password</label>
+                    </div>
+
+        
+                    <div class="pt-1 mb-4">
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-info btn-lg btn-block" (click)="onRegister()" type="button">Register</button>
+                    </div>
+        
+                  
+                  
+        
+                  </form>
+            }
+           
+            
+  
+          </div>
+  
+        </div>
+        <div class="col-sm-6 px-0 d-none d-sm-block">
+          <img src="https://media.istockphoto.com/id/1198235902/photo/nine-arches-bridge-in-elle-sri-lanka-taken-in-august-2019.jpg?s=612x612&w=0&k=20&c=_5-rVCZAzgfNe7yDmwtlw_OulfN94dSJfMzLTMpLnpU="
+            alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: center;">
+        </div>
+      </div>
+    </div>
+  </section>
