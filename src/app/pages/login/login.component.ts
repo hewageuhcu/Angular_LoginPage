@@ -38,7 +38,7 @@ export class LoginComponent {
       localArray.push(this.userRegisterObj);
       localStorage.setItem("angular18Local",JSON.stringify(localArray))
     }
-    alert("Registration Success");
+    alert("Successfully Registered");
   }
 
   onLogin() {
